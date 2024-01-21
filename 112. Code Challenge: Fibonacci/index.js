@@ -7,7 +7,7 @@ function fibonacci(n) {
         return 0;
     }
 
-    let prev1 = 0;
+    let prev1 = 1;
     let prev2= 1;
     let curr;
     
@@ -16,8 +16,15 @@ function fibonacci(n) {
         prev1 = prev2;
         prev2 = curr;
     }
-
+ 
     return prev2; 
 }
 
 console.log(fibonacci(15))
+
+// Clean Code: 
+
+
+  const fib = n => (n == 1 || n == 2) ? 1 : fib(n-2) + fib(n-1)
+
+  console.log(fib(10))
